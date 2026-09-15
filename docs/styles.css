@@ -70,6 +70,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 [data-theme="light"] .nav-logo-img { filter: none; mix-blend-mode: multiply; }
 .nav-logo { font-family: var(--disp); font-size: 13px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--text); text-decoration: none; }
 .iris-inline { background: var(--iris); background-size: 600% 600%; background-repeat: no-repeat; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: iris-flow 10s ease-in-out infinite alternate; }
+.nav-right { display: flex; align-items: center; gap: 24px; }
 .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
 .nav-links a { color: var(--muted); text-decoration: none; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; transition: color .2s; }
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
@@ -84,6 +85,16 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 [data-theme="light"] .toggle-knob { transform: rotate(-135deg); background: #f0f0f0; border-color: rgba(0,0,0,.2); }
 [data-theme="light"] .toggle-knob::after { background: rgba(0,0,0,.65); }
 [data-theme="light"] .toggle-knob-moon { transform: rotate(135deg); color: rgba(0,0,0,.5); }
+
+/* ── MOBILE MENU TOGGLE (knob-styled) ── */
+.menu-toggle { display: none; background: none; border: none; padding: 0; cursor: pointer; align-items: center; justify-content: center; }
+.menu-knob svg { position: absolute; color: rgba(255,255,255,.75); transition: opacity .25s, transform .3s; }
+[data-theme="light"] .menu-knob svg { color: rgba(0,0,0,.6); }
+.menu-icon-close { opacity: 0; transform: rotate(-90deg); }
+.menu-toggle[aria-expanded="true"] .menu-icon-open { opacity: 0; transform: rotate(90deg); }
+.menu-toggle[aria-expanded="true"] .menu-icon-close { opacity: 1; transform: rotate(0); }
+.menu-toggle[aria-expanded="true"] .menu-knob { background: var(--text); border-color: var(--text); }
+.menu-toggle[aria-expanded="true"] .menu-knob svg { color: var(--bg); }
 
 /* ── SECTIONS ── */
 section { position: relative; z-index: 1; padding: 96px 48px; }
@@ -122,9 +133,30 @@ footer { border-top: 1px solid var(--line); padding: 40px 48px; display: flex; j
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
-  .nav-links { display: none; }
+  .nav-right { gap: 14px; }
+  .menu-toggle { display: flex; }
+  .nav-links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--nav-bg); backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    max-height: 0; overflow: hidden; opacity: 0; pointer-events: none;
+    transition: max-height .35s ease, opacity .25s ease;
+  }
+  .nav-links.open { max-height: 420px; opacity: 1; pointer-events: auto; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; width: 100%; padding: 16px 24px; border-top: 1px solid var(--line); box-sizing: border-box; }
   section { padding: 72px 24px; }
   .page-header { padding: 110px 24px 56px; }
   footer { flex-direction: column; gap: 24px; text-align: center; padding: 36px 24px; }
   .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  nav { padding: 14px 16px; }
+  .nav-logo-img { height: 32px; margin: 0 -14px; }
+  .nav-logo { font-size: 12px; }
+  section { padding: 56px 16px; }
+  .page-header { padding: 96px 16px 44px; }
+  footer { padding: 28px 16px; }
 }
