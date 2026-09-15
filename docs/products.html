@@ -6,8 +6,8 @@
 <title>Products — Arcsin Engineering</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260915">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260915-2">
 <script>if(localStorage.getItem('theme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
 <style>
   .category-split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; padding-top: calc(72px + 10px); margin-bottom: 10px; }
@@ -34,13 +34,13 @@
   .knob:nth-child(4) .knob-body { animation-delay: -4.5s; }
   @keyframes knobRotate { 0%,100% { transform: rotate(-30deg); } 50% { transform: rotate(30deg); } }
   .knob-ring { position: absolute; inset: -4px; border-radius: 50%; padding: 1px; background: conic-gradient(from var(--iris-angle), #ff3cac,#ff9a3c,#3cc8ff,#b03cff,#ff3cac); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; animation: iris-rotate 4s linear infinite; opacity: .4; }
-  .knob-label { font-size: 10px; color: var(--muted); letter-spacing: .1em; text-align: center; }
+  .knob-label { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: .1em; text-align: center; }
   .product-visual-label { text-align: center; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
-  .product-visual-sub { font-size: 9px; color: rgba(107,106,102,.4); letter-spacing: .1em; margin-top: 4px; text-align: center; }
+  .product-visual-sub { font-family: var(--mono); font-size: 9px; color: rgba(107,106,102,.4); letter-spacing: .1em; margin-top: 4px; text-align: center; }
   .product-name { font-family: 'Nemesys', var(--disp); font-size: clamp(36px, 4vw, 56px); font-weight: 400; line-height: 1; letter-spacing: -.01em; margin-bottom: 8px; }
   .product-name .accent { background: var(--iris); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: iris-flow 10s ease-in-out infinite alternate; }
   .product-tagline { font-size: 13px; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 28px; }
-  .product-desc { color: var(--muted); font-size: 14px; line-height: 1.9; margin-bottom: 24px; }
+  .product-desc { font-family: var(--sans); color: var(--muted); font-size: 16px; line-height: 1.9; margin-bottom: 24px; }
   .product-desc strong { color: var(--text); font-weight: 500; }
   .product-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 36px; }
   .spec-item { background: var(--bg3); border: 1px solid var(--line); padding: 16px 18px; }
@@ -54,7 +54,7 @@
   .spec-row { display: grid; grid-template-columns: 220px 1fr; background: var(--bg2); border: 1px solid var(--line); transition: border-color .2s; }
   .spec-row:hover { border-color: var(--line2); }
   .spec-row-key { padding: 18px 24px; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); border-right: 1px solid var(--line); display: flex; align-items: center; }
-  .spec-row-val { padding: 18px 24px; font-size: 13px; display: flex; align-items: center; }
+  .spec-row-val { font-family: var(--mono); padding: 18px 24px; font-size: 13px; display: flex; align-items: center; }
 
   .upcoming { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .upcoming-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
@@ -67,7 +67,7 @@
   .status-research { border: 1px solid transparent; background-image: linear-gradient(var(--bg3), var(--bg3)), linear-gradient(90deg, rgba(255,60,172,.35), rgba(60,200,255,.35), rgba(176,60,255,.35)); background-clip: padding-box, border-box; background-origin: padding-box, border-box; color: var(--text); }
   .upcoming-name { font-family: var(--disp); font-size: 22px; font-weight: 700; margin-bottom: 8px; }
   .upcoming-sub { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
-  .upcoming-desc { font-size: 13px; color: var(--muted); line-height: 1.8; }
+  .upcoming-desc { font-family: var(--sans); font-size: 15px; color: var(--muted); line-height: 1.8; }
   .upcoming-icon { width: 36px; height: 36px; margin-bottom: 20px; color: rgba(255,255,255,.25); }
 
   @media (max-width: 900px) {

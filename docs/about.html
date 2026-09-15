@@ -6,20 +6,20 @@
 <title>About — Arcsin Engineering</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260915">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260915-2">
 <script>if(localStorage.getItem('theme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
 <style>
   .page-header-glow { position: absolute; top: -30%; left: -10%; width: 60vw; height: 60vw; background: radial-gradient(ellipse at center, rgba(100,60,255,.04) 0%, transparent 65%); pointer-events: none; }
 
   .mission { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .mission p { color: var(--muted); line-height: 1.9; margin-bottom: 20px; font-size: 14px; }
+  .mission p { font-family: var(--sans); color: var(--muted); line-height: 1.9; margin-bottom: 20px; font-size: 16px; }
   .mission p strong { color: var(--text); font-weight: 500; }
   .mission-values { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
   .value-card { background: var(--bg3); border: 1px solid var(--line); padding: 24px 22px; }
   .value-card-title { font-family: var(--disp); font-size: 15px; font-weight: 600; margin-bottom: 8px; }
-  .value-card-desc { font-size: 12px; color: var(--muted); line-height: 1.7; }
+  .value-card-desc { font-family: var(--sans); font-size: 14px; color: var(--muted); line-height: 1.7; }
 
   .arch-diagram { display: grid; grid-template-columns: 1fr; gap: 2px; }
   .arch-layer { display: grid; grid-template-columns: 160px 1fr; gap: 2px; opacity: 0; transform: translateX(-20px); transition: opacity .5s ease, transform .5s ease; }
@@ -31,7 +31,7 @@
   .layer-content.bridge { border-left: 2px solid transparent; border-image: linear-gradient(to bottom, #ff3cac, #3cc8ff, #b03cff) 1; }
   .layer-content.cpp { border-left: 2px solid rgba(255,255,255,.15); }
   .layer-name { font-family: var(--disp); font-size: 16px; font-weight: 600; margin-bottom: 4px; }
-  .layer-tech { font-size: 12px; color: var(--muted); }
+  .layer-tech { font-family: var(--mono); font-size: 12px; color: var(--muted); }
   .layer-badge { margin-left: auto; padding: 4px 10px; border-radius: 2px; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; flex-shrink: 0; background: rgba(255,255,255,.06); color: rgba(255,255,255,.5); border: 1px solid var(--line); }
   .arch-arrow { display: flex; justify-content: center; padding: 6px 0; }
   .arch-arrow svg { color: var(--muted); }
@@ -40,7 +40,7 @@
   .stack-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
   .stack-item { background: var(--bg3); border: 1px solid var(--line); padding: 28px 22px; }
   .stack-item-name { font-family: var(--disp); font-size: 15px; font-weight: 600; margin-bottom: 8px; }
-  .stack-item-role { font-size: 11px; color: var(--muted); line-height: 1.6; }
+  .stack-item-role { font-family: var(--mono); font-size: 11px; color: var(--muted); line-height: 1.6; }
   .stack-item-tag { display: inline-block; margin-top: 14px; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; background: var(--iris); background-size: 600% 600%; background-repeat: no-repeat; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: iris-flow 10s ease-in-out infinite alternate; border-bottom: 1px solid rgba(128,128,128,.2); padding-bottom: 2px; }
 
   @media (max-width: 900px) {

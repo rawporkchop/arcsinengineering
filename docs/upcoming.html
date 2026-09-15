@@ -6,14 +6,14 @@
 <title>Upcoming — Arcsin Engineering</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260915">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260915-2">
 <script>if(localStorage.getItem('theme')!=='dark')document.documentElement.setAttribute('data-theme','light');</script>
 <style>
   .page-header-glow { position: absolute; top: -30%; right: -10%; width: 60vw; height: 60vw; background: radial-gradient(ellipse at center, rgba(60,200,255,.04) 0%, transparent 65%); pointer-events: none; }
 
   .progress-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-  .progress-text { font-size: 12px; color: var(--muted); }
+  .progress-text { font-family: var(--mono); font-size: 12px; color: var(--muted); }
   .progress-count { font-family: var(--disp); font-size: 13px; font-weight: 600; }
   .progress-bar { height: 2px; background: var(--line2); border-radius: 1px; margin-bottom: 48px; overflow: hidden; }
   .progress-fill { height: 100%; background: var(--iris); background-size: 600% 600%; background-repeat: no-repeat; animation: iris-flow 8s ease-in-out infinite alternate; width: 22%; border-radius: 1px; }
@@ -23,7 +23,7 @@
   .milestone:hover { border-color: var(--line2); }
   .milestone-num { font-family: var(--disp); font-size: 32px; font-weight: 800; color: var(--line2); line-height: 1; }
   .milestone-title { font-family: var(--disp); font-size: 16px; font-weight: 600; margin-bottom: 4px; }
-  .milestone-desc { font-size: 12px; color: var(--muted); }
+  .milestone-desc { font-family: var(--mono); font-size: 12px; color: var(--muted); }
   .milestone-status { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; padding: 5px 12px; border-radius: 2px; white-space: nowrap; }
   .status-done { background: rgba(255,255,255,.06); color: rgba(255,255,255,.4); border: 1px solid var(--line2); }
   .status-active { border: 1px solid transparent; background-image: linear-gradient(var(--bg2),var(--bg2)), linear-gradient(90deg,rgba(255,60,172,.35),rgba(60,200,255,.35),rgba(176,60,255,.35)); background-clip: padding-box,border-box; background-origin: padding-box,border-box; color: var(--text); }
@@ -40,7 +40,7 @@
   .future-pill.iris-pill { border: 1px solid transparent; background-image: linear-gradient(var(--bg3),var(--bg3)), linear-gradient(90deg,rgba(255,60,172,.3),rgba(60,200,255,.3),rgba(176,60,255,.3)); background-clip: padding-box,border-box; background-origin: padding-box,border-box; color: var(--text); }
   .future-name { font-family: var(--disp); font-size: 20px; font-weight: 700; margin-bottom: 6px; }
   .future-sub { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
-  .future-desc { font-size: 13px; color: var(--muted); line-height: 1.8; }
+  .future-desc { font-family: var(--sans); font-size: 15px; color: var(--muted); line-height: 1.8; }
 
   @media (max-width: 900px) {
     .milestone {
