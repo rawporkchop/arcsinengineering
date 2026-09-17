@@ -23,19 +23,19 @@
   --text: #efefef; --muted: #a3a3a3;
   --mono: 'DM Mono', monospace; --disp: 'Syne', sans-serif; --sans: 'DM Sans', sans-serif;
   --iris: linear-gradient(45deg,#ff3cac,#ff9a3c,#fcf012,#3cffb0,#3cc8ff,#b03cff,#ff3cac);
-  --nav-bg: rgba(5,5,5,0.88); --scanline-color: rgba(255,255,255,0.008);
+  --nav-bg: rgba(5,5,5,0.78); --scanline-color: rgba(255,255,255,0.008);
   --cursor-col: #fff; --noise-opacity: 0.28;
 }
 [data-theme="light"] {
   --bg: #f8f8f8; --bg2: #f0f0f0; --bg3: #e6e6e6;
   --line: rgba(0,0,0,0.07); --line2: rgba(0,0,0,0.14);
   --text: #111111; --muted: #999999;
-  --nav-bg: rgba(248,248,248,0.92); --scanline-color: rgba(0,0,0,0.012);
+  --nav-bg: rgba(248,248,248,0.82); --scanline-color: rgba(0,0,0,0.012);
   --cursor-col: #111; --noise-opacity: 0.1;
 }
 
 /* ── BASE ── */
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--bg); }
 body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -65,7 +65,7 @@ body::after {
 }
 
 /* ── NAV ── */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; border-bottom: 1px solid var(--line); background: var(--nav-bg); backdrop-filter: blur(14px); }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; border-bottom: 1px solid var(--line); background: var(--nav-bg); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transform: translateZ(0); -webkit-transform: translateZ(0); }
 .nav-logo-img { height: 40px; width: auto; vertical-align: middle; margin: 0 -20px; position: relative; top: -1px; display: inline-block; filter: invert(1); }
 [data-theme="light"] .nav-logo-img { filter: none; }
 .nav-logo { font-family: var(--disp); font-size: 13px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--text); text-decoration: none; }
@@ -142,7 +142,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 48px; display: flex; j
   .nav-links {
     position: absolute; top: 100%; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;
-    background: var(--nav-bg); backdrop-filter: blur(14px);
+    background: var(--nav-bg); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--line);
     max-height: 0; overflow: hidden; opacity: 0; pointer-events: none;
     transition: max-height .35s ease, opacity .25s ease;
