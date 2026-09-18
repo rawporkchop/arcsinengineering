@@ -91,6 +91,19 @@
       }
     });
   }
+
+  // Keep the fixed nav glued to Safari's true visual viewport top - iOS Safari's
+  // address bar collapses/expands on scroll, and position:fixed tracks the layout
+  // viewport, not the visual one, leaving a gap that exposes scrolled-past content.
+  const navEl = document.querySelector('nav');
+  if (navEl && window.visualViewport) {
+    const syncNavToViewport = () => {
+      navEl.style.transform = `translateY(${window.visualViewport.offsetTop}px) translateZ(0)`;
+    };
+    window.visualViewport.addEventListener('resize', syncNavToViewport);
+    window.visualViewport.addEventListener('scroll', syncNavToViewport);
+    syncNavToViewport();
+  }
 </script>
 </body>
 </html>
