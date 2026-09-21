@@ -65,7 +65,7 @@ body::after {
 }
 
 /* ── NAV ── */
-nav { position: fixed; top: -100px; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 116px 20px 20px 48px; border-bottom: 1px solid var(--line); background: var(--nav-bg); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transform: translateZ(0); -webkit-transform: translateZ(0); }
+nav { position: fixed; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 116px 20px 20px 48px; border-bottom: 1px solid var(--line); background: var(--nav-bg); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transform: translateZ(0); -webkit-transform: translateZ(0); }
 .nav-logo-img { height: 40px; width: auto; vertical-align: middle; margin: 0 -20px; position: relative; top: -1px; display: inline-block; filter: invert(1); }
 [data-theme="light"] .nav-logo-img { filter: none; }
 .nav-logo { font-family: var(--disp); font-size: 13px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--text); text-decoration: none; }
