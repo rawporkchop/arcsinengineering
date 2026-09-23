@@ -136,7 +136,7 @@ footer { border-top: 1px solid var(--line); padding: 40px 48px; display: flex; j
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  nav { padding: 116px 24px 16px; }
+  nav { position: relative; top: auto; left: auto; right: auto; padding: 16px 24px; }
   .nav-right { gap: 14px; }
   .menu-toggle { display: flex; }
   .nav-links {
@@ -151,16 +151,16 @@ footer { border-top: 1px solid var(--line); padding: 40px 48px; display: flex; j
   .nav-links li { width: 100%; }
   .nav-links a { display: block; width: 100%; padding: 16px 24px; border-top: 1px solid var(--line); box-sizing: border-box; }
   section { padding: 72px 24px; }
-  .page-header { padding: 110px 24px 56px; }
+  .page-header { padding: 37px 24px 56px; }
   footer { flex-direction: column; gap: 24px; text-align: center; padding: 36px 24px; }
   .footer-links { flex-wrap: wrap; justify-content: center; }
 }
 
 @media (max-width: 480px) {
-  nav { padding: 114px 16px 14px; }
+  nav { padding: 14px 16px; }
   .nav-logo-img { height: 32px; margin: 0 -14px; }
   .nav-logo { font-size: 12px; }
   section { padding: 56px 16px; }
-  .page-header { padding: 96px 16px 44px; }
+  .page-header { padding: 33px 16px 44px; }
   footer { padding: 28px 16px; }
 }
